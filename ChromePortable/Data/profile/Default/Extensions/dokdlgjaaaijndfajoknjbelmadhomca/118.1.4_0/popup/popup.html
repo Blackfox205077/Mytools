@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>YouTube High Definition</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../libs/bootstrap-3.3.1-dist/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../libs/bootstrap-3.3.1-dist/dist/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="./popup.css" type="text/css" />
+    <script type="module" src="./popup.mjs" defer></script>
+  </head>
+  <body>
+    <h1>
+      <a target="_blank">YouTube High Definition</a>
+    </h1>
+    <div id="popup">
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Quality</legend>
+          <div class="wrapper">
+            <select id="video_quality">
+              <option value="highres">Highres</option>
+              <option value="hd4320">8K 4320p</option>
+              <option value="hd2880">5K 2880p</option>
+              <option value="hd2160">4K 2160p</option>
+              <option value="hd1440">HD 1440p</option>
+              <option value="hd1080">HD 1080p</option>
+              <option value="hd720">720p</option>
+              <option value="large">Large</option>
+              <option value="medium">Medium</option>
+              <option value="small">Small</option>
+              <option value="tiny">Tiny</option>
+              <option value="default">Default</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Size</legend>
+          <div class="wrapper">
+            <select id="video_size">
+              <option value="fullpage">Full Page</option>
+              <option value="expand">Theater</option>
+              <option value="shrink">Default</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Speed</legend>
+          <div class="wrapper">
+            <select id="video_speed">
+              <option value="2">2</option>
+              <option value="1.5">1.5</option>
+              <option value="1.25">1.25</option>
+              <option value="1">Normal</option>
+              <option value="0.75">0.75</option>
+              <option value="0.5">0.5</option>
+              <option value="0.25">0.25</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Volume</legend>
+          <div class="wrapper">
+            <form id="volume">
+              <div class="mb-10">
+                <div class="mr-10 float-left">
+                  <input
+                    type="radio"
+                    name="volume"
+                    class="vol_default"
+                    value="default"
+                    id="vol_default"
+                  />
+                  <label for="vol_default">Default</label>
+                  <br />
+                </div>
+                <div class="mr-10 float-left">
+                  <input
+                    type="radio"
+                    name="volume"
+                    class="vol_mute"
+                    value="mute"
+                    id="vol_mute"
+                  />
+                  <label for="vol_mute">Mute</label>
+                  <br />
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="volume"
+                    class="vol_100"
+                    value="100"
+                    id="vol_100"
+                  />
+                  <label for="vol_100">100%</label>
+                </div>
+              </div>
+              <div class="clear-both">
+                <input
+                  type="radio"
+                  name="volume"
+                  class="vol_volumelevel"
+                  value="volumelevel"
+                  id="volumelevelinput"
+                />
+                <label for="volumelevelinput">Volume Level</label>
+                <input
+                  class="ml-10"
+                  id="volumelevel"
+                  type="number"
+                  step="1"
+                  min="0"
+                  max="100"
+                />
+              </div>
+            </form>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Subtitles</legend>
+          <div class="wrapper">
+            <form id="subtitles">
+              <div class="display-flex">
+                <div class="mr-10">
+                  <input
+                    type="radio"
+                    name="subtitles"
+                    class="subtitles_on"
+                    value="on"
+                    id="subtitles_on"
+                  />
+                  <label for="subtitles_on">On</label>
+                  <br />
+                </div>
+                <div class="mr-10">
+                  <input
+                    type="radio"
+                    name="subtitles"
+                    class="subtitles_off"
+                    value="off"
+                    id="subtitles_off"
+                  />
+                  <label for="subtitles_off">Off</label>
+                  <br />
+                </div>
+              </div>
+            </form>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Video Annotations</legend>
+          <div class="wrapper">
+            <input type="checkbox" id="annotationsoff" />
+            <label for="annotationsoff">Turn off annotations</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Auto Play</legend>
+          <div class="wrapper">
+            <div class="mb-10" hidden>
+              <label for="youtubevideoautoplaybehavior">
+                YouTube Video Auto Play Behaviour
+              </label>
+              <select class="float-right" id="youtubevideoautoplaybehavior">
+                <option value="default">Default</option>
+                <option value="autoplay">Auto Play</option>
+                <option value="autopause">Auto Pause</option>
+              </select>
+            </div>
+            <div class="mb-10 clear-both" hidden>
+              <label for="playlistvideoautoplaybehavior">
+                Playlist Auto Play Behaviour
+              </label>
+              <select class="float-right" id="playlistvideoautoplaybehavior">
+                <option value="default">Default</option>
+                <option value="autoplay">Auto Play</option>
+                <option value="autopause">Auto Pause</option>
+              </select>
+            </div>
+            <input type="checkbox" id="suggestedautoplay" />
+            <label for="suggestedautoplay">
+              Auto play next suggested video
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv" hidden>
+        <fieldset>
+          <legend>Embedded Video</legend>
+          <div class="wrapper">
+            <div>
+              <label for="embeddedvideoautoplaybehavior">
+                Auto Play Behaviour
+              </label>
+              <select class="float-right" id="embeddedvideoautoplaybehavior">
+                <option value="default">Default</option>
+                <option value="autoplay">Auto Play</option>
+                <option value="autopause">Auto Pause</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="optiondiv">
+        <fieldset>
+          <legend>Generic</legend>
+          <div class="wrapper">
+            <input type="checkbox" id="autoexpanddescription" />
+            <label for="autoexpanddescription">
+              Auto expand video description box
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

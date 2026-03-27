@@ -1,0 +1,71 @@
+.mb-10 {
+  margin-bottom: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-both {
+  clear: both;
+}
+.display-flex {
+  display: flex;
+}
+body {
+  overflow-x: hidden;
+  padding: 0 25px;
+  margin: auto;
+  font-family: "Segoe UI", "Source Sans Pro", Frutiger, "Frutiger Linotype",
+    "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: #ac0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 255, 255, 0.15) 20px,
+    rgba(255, 255, 255, 0.15) 40px
+  );
+  background-attachment: fixed;
+}
+#popup {
+  width: 450px;
+  height: auto;
+  margin: auto;
+}
+#popup.android {
+  width: unset;
+}
+fieldset {
+  margin-bottom: 15px;
+}
+legend {
+  border: none !important;
+  margin-bottom: 5px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+.wrapper {
+  border: 1px solid grey;
+  padding: 10px;
+  background-color: rgba(245, 255, 239, 0.66);
+}
+label {
+  font-weight: unset !important;
+  margin-bottom: 0 !important;
+}
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+h1 a {
+  color: #000;
+  text-decoration: underline;
+}
